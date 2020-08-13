@@ -1,13 +1,15 @@
 export type Screens = {
   launch: {}
+  signup: { signupParam: string }
   home: {}
+  search: { searchParam: number }
 }
 
 export type Navigators = {
   AppNavigator: Navigatable<'AuthNavigator' | 'MainNavigator'>
-  AuthNavigator: Navigatable<'launch'>
+  AuthNavigator: Navigatable<'launch' | 'signup'>
   MainNavigator: Navigatable<'MainTabNavigator'>
-  MainTabNavigator: Navigatable<'home'>
+  MainTabNavigator: Navigatable<'home' | 'search'>
 }
 
 type Navigatable<T> = T extends keyof Screens
