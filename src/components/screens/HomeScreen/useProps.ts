@@ -9,8 +9,8 @@ export const useProps = (_params: Screens['home']): Props => {
       navigation.navigate('AppNavigator', {
         screen: 'AuthNavigator',
         params: {
-          screen: 'launch',
-          params: {},
+          screen: 'signup',
+          params: { signupParam: '' },
         },
       })
     },
